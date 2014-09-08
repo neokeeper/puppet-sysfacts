@@ -1,0 +1,22 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-apache (1.1.1)
+      puppetlabs-concat (>= 1.0.0)
+      puppetlabs-stdlib (>= 2.4.0)
+    puppetlabs-concat (1.1.0)
+      puppetlabs-stdlib (>= 4.0.0)
+    puppetlabs-stdlib (4.3.2)
+    yguenane-repoforge (0.2.0)
+      puppetlabs-stdlib (>= 3.2.0)
+
+PATH
+  remote: ./vendor/monit
+  specs:
+    puppet-monit (0.0.4)
+
+DEPENDENCIES
+  puppet-monit (>= 0)
+  puppetlabs-apache (>= 0)
+  yguenane-repoforge (>= 0)
+
