@@ -60,6 +60,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       local.vm.box_url    = cfg[:box_url]
       local.vm.host_name  = ENV['VAGRANT_HOSTNAME'] || name.to_s.downcase.gsub(/_/, '-').concat(".puppetlabs.vm")
 
+      local.vm.network :forwarded_port, guest: 80, host: 8080, protocol: 'tcp', auto_correct: true
+
       # Puppet Provisioner setup
       local.vm.provision :puppet do |puppet|
         puppet.manifests_path     = "manifests"
