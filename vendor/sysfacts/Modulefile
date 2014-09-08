@@ -1,5 +1,5 @@
-name    'neokeeper-sysfacter'
-source  'git@github.com:neokeeper/puppet-sysfacter.git'
+name    'neokeeper-sysfacts'
+source  'git@github.com:neokeeper/puppet-sysfacts.git'
 author  'Martin Skala'
 summary 'Module with python script provising basic system facts annd statistics'
 version '0.0.1'

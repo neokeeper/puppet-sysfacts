@@ -1,8 +1,9 @@
 node default {
 
+  # enable repoforge yum repository (incl. monit pkg)
   include repoforge
-  include apache
 
+  # redefine monit default service check interval
   class { 'monit':
     check_interval  => 45,
   }
@@ -11,6 +12,7 @@ node default {
     ensure => present,
   }
 
+  # fail2ban service monitoring using monit
   monit::process { 'fail2ban':
     ensure        => running,
     start_command => '/etc/init.d/fail2ban start',
@@ -19,6 +21,7 @@ node default {
     require       => Package['fail2ban'],
   }
 
+  # apache service monitoring using monit
   monit::process { 'apache':
     ensure        => running,
     start_command => '/etc/init.d/httpd start',
@@ -28,4 +31,6 @@ node default {
     require       => Package['httpd'],
   }
 
+  # install our stats & facts app under apache virtualhost
+  include sysfacts
 }
