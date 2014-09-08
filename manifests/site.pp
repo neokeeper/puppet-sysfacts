@@ -1,8 +1,11 @@
 node default {
 
   include repoforge
-  include monit
   include apache
+
+  class { 'monit':
+    check_interval  => 45,
+  }
 
   package { 'fail2ban':
     ensure => present,
@@ -20,7 +23,9 @@ node default {
     ensure        => running,
     start_command => '/etc/init.d/httpd start',
     stop_command  => '/etc/init.d/httpd stop',
+    timeout       => 30,
     pidfile       => '/var/run/httpd/httpd.pid',
     require       => Package['httpd'],
   }
+
 }
