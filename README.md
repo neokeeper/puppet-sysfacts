@@ -2,16 +2,13 @@
 
 This is pure testing puppet configuration and thus it might not comply with best puppet practise.
 
+Tested with <vm>: Centos6_64
+
 ## Usage
 
     $ gem install puppet-librarian puppet
     $ puppet-librarian install
     $ vagrant up <vm>
-
-### TODO
-
-* Rewrite sysfacter into puppet module
-* Add Apache CGI vhost using the sysfacter module
 
 ## Development and contribution
 
