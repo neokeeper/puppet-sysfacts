@@ -78,7 +78,7 @@ def report_facts_and_stats():
     print(u'== Additional information ==')
     print
 
-    print(u'Running processes: {0}'.format(len(psutil.get_pid_list())))
+    print(u'Running processes: {0}'.format(len(psutil.pids())))
 
     meminfo = memory_info()
     print('Total memory: {0}'.format(meminfo['MemTotal']))

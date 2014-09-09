@@ -9,7 +9,8 @@ node default {
   }
 
   package { 'fail2ban':
-    ensure => present,
+    ensure  => present,
+    require => Class['repoforge']
   }
 
   # fail2ban service monitoring using monit
