@@ -6,7 +6,7 @@ Tested with <vm>: Centos6_64
 
 ## Usage
 
-    $ gem install puppet-librarian puppet
+    $ gem install librarian-puppet puppet
     $ puppet-librarian install
     $ vagrant up <vm>
 
