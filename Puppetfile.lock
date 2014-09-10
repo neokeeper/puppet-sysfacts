@@ -11,8 +11,10 @@ FORGE
     yguenane-repoforge (0.2.0)
       puppetlabs-stdlib (>= 3.2.0)
 
-PATH
-  remote: ./vendor/monit
+GIT
+  remote: git://github.com/neokeeper/puppet-monit.git
+  ref: master
+  sha: 299500835aa0e895ae90b219ec5523d077bbd484
   specs:
     puppet-monit (0.0.4)
 
